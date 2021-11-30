@@ -1,6 +1,7 @@
+
 drop database if exists webshop;
-create database webshop;
-use webshop;
+create database verkkokauppa;
+use verkkokauppa;
 
 create table category (
     id int primary key auto_increment,
@@ -47,9 +48,9 @@ create table order_row (
     on delete restrict
 );
 
-insert into category(name) values ('Furniture');
-insert into category(name) values ('Lighting');
-insert into category(name) values ('Decor');
+insert into category(name) values ('Huonekalut');
+insert into category(name) values ('Valaisimet');
+insert into category(name) values ('Sisustustavarat');
 
 insert into product (name, price, image, category_id) values ('Pöytä', 100, 'placeholder.png', 1);
 insert into product (name, price, image, category_id) values ('Tuoli', 50, 'placeholder.png', 1);
