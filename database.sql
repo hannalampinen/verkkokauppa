@@ -1,4 +1,3 @@
-
 drop database if exists verkkokauppa;
 create database verkkokauppa;
 use verkkokauppa;
@@ -93,12 +92,12 @@ insert into product (name, price, image, category_id, description) values ('Ariz
 insert into product (name, price, image, category_id, description) values ('Athena-koristepatsas', 44.99, 'athena-patsas.jpg', 3, 'Athena-koristepatsas on saanut inpiraationsa kreikkalaisesta mytologiasta. Korkeus 40 cm, leveys 30 cm ja pituus 25 cm. Valmistettu polystonesta. Puhdistus nihkeällä liinalla. ');
 insert into product (name, price, image, category_id, description) values ('Double-vaasi', 24.50, 'double-maljakko.jpg', 3, 'Keraaminen Double-vaasi. Korkeus 20 cm, halkaisija 12 cm.');
 
-insert into product (name, price, image, category_id, description) values ('Locker-senkki', 399.00, 'locker-senkki.jpg', 1, 'Massiivipuusta valmistettu Locker-senkki jossa kahdeksan lokeroa. Korkeus 80 cm, leveys 145 cm ja syvyys 40 cm. Lokerikkojen mitat 35 x 38 cm.')
-insert into product (name, price, image, category_id, description) values ('Round-peili', 80.00, 'round-peili.jpg', 3, 'Punotusta nauhasta roikkuva Round-peili. Halkaisija 60 cm.')
-insert into product (name, price, image, category_id, description) values ('Tangerine-lakanasetti', 88.95, 'tangerine-lakanat.jpg', 3, 'Pellavasta valmistetut Tangerine-lakanat. Pakkauksessa yksi pussilakana 240x220cm, sekä kaksi tyynyliinaa 50x60cm. Suosittelemme pesua 60 asteessa sekä kuivausta kuivausrummussa keskilämmöllä.' )
-insert into product (name, price, image, category_id, description) values ('Zara-kori', 39.50, 'zara-kori.jpg', 3, 'Meriheinästä valmistettu kori, jossa kahvat. Halkaisija 40 cm, korkeus 42 cm.')
-insert into product (name, price, image, category_id, description) values ('Block-lipasto', 549.95, 'block-lipasto.jpg', 1, 'Skandinaavista muotoilua huokuva jykevä massiivipuinen lipasto kuudella vetolaatikolla. Leveys 153cm, korkeus 73cm, syvyys 40cm.')
-insert into product (name, price, image, category_id, description) values ('Bamboo-tikkaat', 115.00, 'bamboo-tikkaat.jpg', 3, 'Kierrätyspuusta valmistetut kauniit sisustustikkaat.')
+insert into product (name, price, image, category_id, description) values ('Locker-senkki', 399.00, 'locker-senkki.jpg', 1, 'Massiivipuusta valmistettu Locker-senkki jossa kahdeksan lokeroa. Korkeus 80 cm, leveys 145 cm ja syvyys 40 cm. Lokerikkojen mitat 35 x 38 cm.');
+insert into product (name, price, image, category_id, description) values ('Round-peili', 80.00, 'round-peili.jpg', 3, 'Punotusta nauhasta roikkuva Round-peili. Halkaisija 60 cm.');
+insert into product (name, price, image, category_id, description) values ('Tangerine-lakanasetti', 88.95, 'tangerine-lakanat.jpg', 3, 'Pellavasta valmistetut Tangerine-lakanat. Pakkauksessa yksi pussilakana 240x220cm, sekä kaksi tyynyliinaa 50x60cm. Suosittelemme pesua 60 asteessa sekä kuivausta kuivausrummussa keskilämmöllä.' );
+insert into product (name, price, image, category_id, description) values ('Zara-kori', 39.50, 'zara-kori.jpg', 3, 'Meriheinästä valmistettu kori, jossa kahvat. Halkaisija 40 cm, korkeus 42 cm.');
+insert into product (name, price, image, category_id, description) values ('Block-lipasto', 549.95, 'block-lipasto.jpg', 1, 'Skandinaavista muotoilua huokuva jykevä massiivipuinen lipasto kuudella vetolaatikolla. Leveys 153cm, korkeus 73cm, syvyys 40cm.');
+insert into product (name, price, image, category_id, description) values ('Bamboo-tikkaat', 115.00, 'bamboo-tikkaat.jpg', 3, 'Kierrätyspuusta valmistetut kauniit sisustustikkaat.');
 
 insert into product (name, price, image, category_id, description) values ('Copper-lattialamppu', 289.95, 'copper-lattialamppu.jpg', 2, 'Rouhea teollisuus-henkinen lattiavalaisin. Korkeus 150 cm.');
 insert into product (name, price, image, category_id, description) values ('Gloomy-riippuvalaisin', 185.00, 'gloomy-kattolamppu.jpg', 2, 'Klassinen 50-lukua henkivä riippuvalaisin. Runko metallia, kupu lasia. Halkaisija 42 cm.');
