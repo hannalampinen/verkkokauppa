@@ -79,8 +79,6 @@ insert into product (name, price, image, category_id) values ('Peili', 40, 'plac
 /* Oikeat tuottteet ja niiden lisäyslauseet */
 
 insert into product (name, price, image, category_id, description) values ('Cutie-cup kahvikuppi', 14,95, 'cutie-cup.jpg', 3, 'Kahvikuppi sekä lautanen. Kahvikupin koko 3,5dl.');
-
-
 insert into product (name, price, image, category_id, description) values ('Dreamy-yöpöytä', 85.50, 'dreamy.jpg', 1, 'Täydestä mangopuusta valmistettu yöpöytä on kauniisti viimeistelty käsityönä. Yöpöydässä vetolaatikko. Helppo koota. Mitat 43x30x58 cm.');
 insert into product (name, price, image, category_id, description) values ('Hang-puunaulakko ', 32.95, 'hang-naulakko.jpg', 3, 'Käsityönä bambusta hiottu naulakko. Seitsemällä ripustuskoukulla. Kiinnitys ruuveilla, jotka tulevat pakkauksessa mukana. Naulakon pituus on 30 cm.');
 insert into product (name, price, image, category_id,description) values ('Sandy-maljakot 2 kpl', 37.95, 'sandy-maljakko.jpg', 3, 'Kauniit savesta käsityönä valmistetut maljakot.');
@@ -105,4 +103,21 @@ insert into product (name, price, image, category_id, description) values ('Bamb
 insert into product (name, price, image, category_id, description) values ('Copper-lattialamppu', 289.95, 'copper-lattialamppu.jpg', 2, 'Rouhea teollisuus-henkinen lattiavalaisin. Korkeus 150 cm.');
 insert into product (name, price, image, category_id, description) values ('Gloomy-riippuvalaisin', 185.00, 'gloomy-kattolamppu.jpg', 2, 'Klassinen 50-lukua henkivä riippuvalaisin. Runko metallia, kupu lasia. Halkaisija 42 cm.');
 insert into product (name, price, image, category_id, description) values ('Modern-riippuvalaisin', 159.00, 'modern-kattolamppu.jpg', 2, 'Siro ja nimensä mukainen moderni riippuvalaisin, joka sopii tilaan katseenvangitsijaksi kaikessa yksinkertaisuudessaan. Halkaisija 28 cm.');
+
+
+/* Uudet lisäykset tietokantalauseisiin 
+insert into product (name, price, image, category_id, description) values ();
+insert into product (name, price, image, category_id, description) values ('Modern-riippuvalaisin', 159.00, 'modern-kattolamppu.jpg', 2, '');
+*/ 
+
+
+insert into product (name, price, image, category_id, description) values ('Modern-riippuvalaisin', 159.95, 'modern-kattolamppu.jpg', 2, 'Siro ja nimensä mukainen moderni riippuvalaisin, joka sopii tilaan katseenvangitsijaksi kaikessa yksinkertaisuudessaan. Halkaisija 28 cm.');
+insert into product (name, price, image, category_id, description) values ('Night-pöytävalaisin', 209.95, 'night-yolamppu.jpg', 2, 'Pyöreä pöytävalaisin jonka vaalea, mattainen lasivarjostin luo pehmeän ja harmonisen valon. Halkaisija 30 cm.');
+insert into product (name, price, image, category_id, description) values ('Nude-pöytävalaisin', 159.00, 'nude-poytalamppu.jpg', 2, 'Boho-henkinen pöytävalaisin, jonka varjostin rouheasta säkkikankaasta. Tuo lämpöä ja palan Balia sisustukseen. Korkeus 40 cm, varjostimen halkaisija 28 cm.');
+insert into product (name, price, image, category_id, description) values ('Simple-lattialamppu', 289.00, 'simple-lattialamppu.jpg', 2, 'Tyylikäs tripod-lattiavalaisin, säädettävillä puisilla jaloilla, kankaisella varjostimella. Säädettävä korkeus max. 160 cm, varjostimen halkaisija 55 cm.');
+
+insert into product (name, price, image, category_id, description) values ('Oreo-vaasi', 62.00, 'oreo-maljakko.jpg', 3, 'Pyöreä kivikeraaminen maljakko, jossa keskellä reikä. Korkeus 21 cm, leveys 22.5 cm');
+insert into product (name, price, image, category_id, description) values ('Jungle-muki', 14.50, 'jungle-muki.jpg', 3, 'Posliinimuki, jossa käsin maalattu graafinen kuviointi.');
+insert into product (name, price, image, category_id, description) values ('Stitch-tyynynpäällinen', 48.00, 'stitch-tyyny.jpg', 3, 'Tyynynpäällinen pestyä pellavaa, reunoissa koristetikkaukset.');
+insert into product (name, price, image, category_id, description) values ('Trick-pöytävalaisin', 159.00, 'trick-valaisin.jpg', 2, 'Kuparinen pöytävalaisin, harjattua metallia. Korkeus 48 cm.');
 
