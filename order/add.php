@@ -24,8 +24,8 @@ try {
         filter_var($lname, FILTER_SANITIZE_STRING) . "','" .
         filter_var($address, FILTER_SANITIZE_STRING) . "','" .
         filter_var($zip, FILTER_SANITIZE_STRING) . "','" .
-        filter_var($fname, FILTER_SANITIZE_STRING) .
-        "',";
+        filter_var($city, FILTER_SANITIZE_STRING) 
+        "')";
 
     $customer_id = executeInsert($db, $sql);
 
@@ -45,7 +45,7 @@ try {
 
     $db->commit(); // commit transaction
 
-    //retunrn 200 status and customer id.
+    //return 200 status and customer id.
     header('HTTP/1.1 200 OK');
     $data = array('id' => $customer_id);
     echo json_encode($data);
