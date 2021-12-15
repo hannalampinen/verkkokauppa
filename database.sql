@@ -4,8 +4,7 @@ use verkkokauppa;
 
 create table category (
     id int primary key auto_increment,
-    name varchar(50) not null,
-    description char(255)
+    name varchar(50) not null
 );
 
 create table product (
@@ -13,6 +12,7 @@ create table product (
     name varchar(100) not null,
     price double (10,2) not null,
     image varchar(50),
+    description char(255),
     category_id int not null,
     index category_id(category_id),
     foreign key (category_id) references category(id)
@@ -71,13 +71,13 @@ insert into product (name, price, image, category_id) values ('Peili', 40, 'plac
     oka lisää product-tauluun tiedot tuotteista.
 
     ALTER TABLE PRODUCT
-    ADD DESCRIPTION CHAR(255)
+    ADD description CHAR(255)
 */
 
 
 /* Oikeat tuottteet ja niiden lisäyslauseet */
 
-insert into product (name, price, image, category_id, description) values ('Cutie-cup kahvikuppi', 14,95, 'cutie-cup.jpg', 3, 'Kahvikuppi sekä lautanen. Kahvikupin koko 3,5dl.');
+insert into product (name, price, image, category_id, description) values ('Cutie-cup kahvikuppi', 14.95, 'cutie-cup.jpg', 3, 'Kahvikuppi sekä lautanen. Kahvikupin koko 3,5dl.');
 insert into product (name, price, image, category_id, description) values ('Dreamy-yöpöytä', 85.50, 'dreamy.jpg', 1, 'Täydestä mangopuusta valmistettu yöpöytä on kauniisti viimeistelty käsityönä. Yöpöydässä vetolaatikko. Helppo koota. Mitat 43x30x58 cm.');
 insert into product (name, price, image, category_id, description) values ('Hang-puunaulakko ', 32.95, 'hang-naulakko.jpg', 3, 'Käsityönä bambusta hiottu naulakko. Seitsemällä ripustuskoukulla. Kiinnitys ruuveilla, jotka tulevat pakkauksessa mukana. Naulakon pituus on 30 cm.');
 insert into product (name, price, image, category_id,description) values ('Sandy-maljakot 2 kpl', 37.95, 'sandy-maljakko.jpg', 3, 'Kauniit savesta käsityönä valmistetut maljakot.');
