@@ -10,6 +10,8 @@ $lname = filter_var($input->lastname, FILTER_SANITIZE_STRING);
 $address = filter_var($input->address, FILTER_SANITIZE_STRING);
 $zip = filter_var($input->zip, FILTER_SANITIZE_STRING);
 $city = filter_var($input->city, FILTER_SANITIZE_STRING);
+$phone = filter_var($input->phone, FILTER_SANITIZE_STRING);
+$email = filter_var($input->email, FILTER_SANITIZE_STRING);
 $cart = $input->cart;
 
 $db = null; //declare and initialize variable for database connection
@@ -18,14 +20,16 @@ try {
 
     $db->beginTransaction(); //Execure all database actions withing transaction
     //insert customer
-    $sql = "Insert into customer (firstname,lastname,address,zip,city) values
+    $sql = "Insert into customer (firstname,lastname,address,zip,city,phone,email) values
     ('" .
         filter_var($fname, FILTER_SANITIZE_STRING) . "','" .
         filter_var($lname, FILTER_SANITIZE_STRING) . "','" .
         filter_var($address, FILTER_SANITIZE_STRING) . "','" .
         filter_var($zip, FILTER_SANITIZE_STRING) . "','" .
-        filter_var($city, FILTER_SANITIZE_STRING) 
-        "')";
+        filter_var($city, FILTER_SANITIZE_STRING) . "','" .
+        filter_var($phone, FILTER_SANITIZE_STRING) . "','" .
+        filter_var($email, FILTER_SANITIZE_STRING) 
+        . "')";
 
     $customer_id = executeInsert($db, $sql);
 
