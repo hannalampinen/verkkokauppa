@@ -48,6 +48,15 @@ create table order_row (
     on delete restrict
 );
 
+/* Admin-taulun luonti kirjautumista varten */ 
+create table admin (
+    id int primary key auto_increment,
+    username varchar(50) not null,
+    password varchar(50) not null
+);
+
+insert into admin(username, password) values ('admin', 'salasana');
+
 insert into category(name) values ('Huonekalut');
 insert into category(name) values ('Valaisimet');
 insert into category(name) values ('Sisustustavarat');

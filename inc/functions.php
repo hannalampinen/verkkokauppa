@@ -31,5 +31,38 @@ function returnError(PDOException $pdoex): void {
     exit;
 }
 
+/**
+ * Tarkistaa onko käyttäjä tietokannassa ja onko salasana validi
+ */
+function checkUser(PDO $db, $username, $password){
+
+    //Sanitoidaan. Lisätty tuntien jälkeen
+    $username = filter_var($username, FILTER_SANITIZE_STRING);
+    $password = filter_var($passwdord, FILTER_SANITIZE_STRING);
+
+    try{
+        $sql = "SELECT password FROM user WHERE username=?";  //komento, arvot parametreina
+        $prepare = $db->prepare($sql);   //valmistellaan
+        $prepare->execute(array($username));  //kysely tietokantaan
+
+        $rows = $prepare->fetchAll(); //haetaan tulokset (voitaisiin hakea myös eka rivi fetch ja tarkistus)
+
+        //Käydään rivit läpi (max yksi rivi tässä tapauksessa) 
+        foreach($rows as $row){
+            $pw = $row["password"];  //password sarakkeen tieto (hash salasana tietokannassa)
+            if( password_verify($password, $pw) ){  //tarkistetaan salasana tietokannan hashia vasten
+                return true;
+            }
+        }
+
+        //Jos ei löytynyt vastaavuutta tietokannasta, palautetaan false
+        return false;
+
+    }catch(PDOException $error){
+        echo '<br>'.$error->getMessage();
+    }
+}
+
+
 
 
