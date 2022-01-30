@@ -4,8 +4,7 @@ use verkkokauppa;
 
 create table category (
     id int primary key auto_increment,
-    name varchar(50) not null,
-    description char(255)
+    name varchar(50) not null
 );
 
 create table product (
@@ -13,6 +12,7 @@ create table product (
     name varchar(100) not null,
     price double (10,2) not null,
     image varchar(50),
+    description char(255),
     category_id int not null,
     index category_id(category_id),
     foreign key (category_id) references category(id)
@@ -48,6 +48,15 @@ create table order_row (
     on delete restrict
 );
 
+/* Admin-taulun luonti kirjautumista varten */ 
+create table admin (
+    id int primary key auto_increment,
+    username varchar(50) not null,
+    password varchar(50) not null
+);
+
+insert into admin(username, password) values ('admin', 'salasana');
+
 insert into category(name) values ('Huonekalut');
 insert into category(name) values ('Valaisimet');
 insert into category(name) values ('Sisustustavarat');
@@ -71,7 +80,7 @@ insert into product (name, price, image, category_id) values ('Peili', 40, 'plac
     oka lisää product-tauluun tiedot tuotteista.
 
     ALTER TABLE PRODUCT
-    ADD DESCRIPTION CHAR(255)
+    ADD description CHAR(255)
 */
 
 
