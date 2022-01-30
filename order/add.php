@@ -24,8 +24,7 @@ try {
         filter_var($lname, FILTER_SANITIZE_STRING) . "','" .
         filter_var($address, FILTER_SANITIZE_STRING) . "','" .
         filter_var($zip, FILTER_SANITIZE_STRING) . "','" .
-        filter_var($city, FILTER_SANITIZE_STRING) 
-        "')";
+        filter_var($city, FILTER_SANITIZE_STRING) ."')";
 
     $customer_id = executeInsert($db, $sql);
 
